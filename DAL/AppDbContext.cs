@@ -45,7 +45,14 @@ namespace Lawyer.DAL
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            // her zaman has ile başlanıcak
+            // modelBuilder.Entity<Category>().HasMany(x => x.Products).WithOne(x => x.Category).HasForeignKey(x=>x.CategoryId);
+            //modelBuilder.Entity<Product>().HasOne(x => x.productFeature).WithOne(x => x.Product).HasForeignKey<ProductFeature>(x =>
+            //x.Product_IdRef
+            // modelBuilder.Entity<CourtHouse>().HasMany(x=>x.).WithOne(x=>x.CourtHouse).HasForeignKey(x=>x.CourtHouse.Id);  // 1-M REL 
+            //M-M REL BETWEEN CASE-COSTUMER
+
+            //veya bu şekilde M:M ilişki kurulabilir kod üzerinden
             modelBuilder.Entity<Case>()
                 .HasMany(x => x.Costumers)
                 .WithMany(x => x.Case)
