@@ -9,9 +9,6 @@ using System.Security.Cryptography.X509Certificates;
 using Lawyer;
 
 
-
-   
-    
         Initilazior.Build();
         using (var _context = new AppDbContext())
         {
